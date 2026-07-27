@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>blog</title>
+    <style>
+        header { 
+        background-color: rgb(69, 0, 0);
+        color: rgb(255, 213, 3);
+        text-align: center;
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 16px; ;
+        border: 5px solid #ffdd00;
+        }
+        main{
+            background-color:rgb(57, 0, 0);
+            color:rgb(255, 255, 255) ;
+            max-width: 800px;
+            margin: 0 auto;
+           padding: 16px;
+        }
+        article{
+            display: flex;
+
+        }
+    
+        img{
+            width: 60px;
+            height: 60px;
+        }
+        .artigo-auto {
+          font-weight:bold;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1> Curiosidades sobre o Homem de Ferro</h1>
+        <p>Vou compartilhar Curiosidades sobre o Homem de Ferro</p>
+    </header>
+   <main>
+    <article>
+
+        <img src="imagem-blog.webp" alt="Essa imagem foi escolhida por conter o assunto principal do blog, se por um acaso nao ter acesso deve ter ocorrido problema na internet ou no site">
+      <div>
+        <h2>  Meu primeiro post</h2>
+           <p class="artigo-autor">Por: laureane M. Silva</p>
+           <p>Bem vindos!!! Esse é o meu blog amores, aqui eu trarei curiosidades 
+            sobre o nosso querido homem de ferro.</p>
+            <button>👎🏻 <span>0</span></button>
+            <button>👍🏻 <span>0</span></button>
+            </div>
+    </article>
+    <article>
+
+        <img src="imagem-blog.webp" alt="Essa imagem foi escolhida por conter o assunto principal do blog, se por um acaso nao ter acesso deve ter ocorrido problema na internet ou no site">
+  <div>
+    <h2>  Quem é o homem de ferro?</h2>
+    
+       <p> O Homem de Ferro, também conhecido como Tony Stark, é um dos super-heróis mais famosos da Marvel Comics. Ele foi criado pelos escritores Stan Lee, Larry Lieber, Don Heck e Jack Kirby, fazendo sua primeira aparição nos quadrinhos em 1963</p>
+        <p>Tony Stark é um inventor brilhante, engenheiro e empresário bilionário. Após sofrer um grave acidente e ser capturado por criminosos, ele constrói uma armadura tecnológica para salvar sua própria vida e escapar. Depois desse acontecimento, decide usar sua inteligência e suas invenções para proteger o mundo.</p>
+        <button>👎🏻 <span>0</span></button>
+        <button>👍🏻 <span>0</span></button>
+        </div>
+    </article>
+    </main>
+</body>
+<script>
+    const botoes = document.querySelectorAll("button ");
+
+        botoes.forEach(function(botao){
+            let curtiu = false; 
+            botao.addEventListener("click", botaoClicado);
+            function botaoClicado(){
+                console.log("fui clicado");
+                let texto = botao.querySelector("span"); 
+                if(curtiu === false){
+                texto.textContent++;
+            curtiu = true;
+                }else{
+                    texto.textContent--;
+                    curtiu = false;
+                }
+          }
+       })
+
+    
+</script>
+</html
